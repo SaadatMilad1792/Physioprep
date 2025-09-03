@@ -1,6 +1,6 @@
 [project]
 name = "physioprep"
-version = "0.1.0"
+version = "0.0.1a1"
 description = "Physioprep: A preprocessing pipeline for physiological waveform datasets."
 authors = [
     {name = "Milad Saadat",email = "saadatmilad1792@gmail.com"}
