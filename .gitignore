@@ -1,0 +1,6 @@
+**__pycache__/
+devlog.txt
+test.ipynb
+.pytest_cache/
+htmlcov/
+.coverage
