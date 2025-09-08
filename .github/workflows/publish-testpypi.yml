@@ -29,6 +29,9 @@ jobs:
 
       - name: Build package
         run: poetry build
+        
+      - name: Configure TestPyPI repository
+        run: poetry config repositories.testpypi https://test.pypi.org/legacy/
 
       - name: Publish to TestPyPI
         run: poetry publish -r testpypi --username ${{ secrets.TESTPYPI_USERNAME }} --password ${{ secrets.TESTPYPI_PASSWORD }}
