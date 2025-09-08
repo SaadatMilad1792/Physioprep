@@ -30,9 +30,7 @@ jobs:
         run: poetry build
 
       - name: Configure GitHub Packages
-        run: poetry config repositories.github "https://pypi.pkg.github.com/SaadatMilad1792"
+        run: poetry config repositories.github "https://__token__:${{ secrets.GH_PACKAGES_TOKEN }}@pypi.pkg.github.com/SaadatMilad1792"
 
       - name: Publish package
-        env:
-          POETRY_PYPI_TOKEN_GITHUB: ${{ secrets.GH_PACKAGES_TOKEN }}
-        run: poetry publish -r github --username __token__ --no-interaction
+        run: poetry publish -r github --no-interaction
