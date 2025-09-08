@@ -80,7 +80,7 @@ class M3WaveFormMasterClass():
     return df
 
   ## -- get patient record as a dataset -- ##
-  def get_patient_record(self, group: str, pid: str, record: str, sampfrom: int | None  = 0, 
+  def get_patient_record(self, group: str, pid: str, record: str, sampfrom: int = 0, 
                          sampto: int | None  = None, channels: list[int] | None = None) -> wfdb.Record:
 
     df = self.args_preset["patients_list"].copy()
@@ -120,8 +120,9 @@ class M3WaveFormMasterClass():
                      channels: list[str] | None = None, timeout: int = 100) -> np.array:
 
     batch, timeout_counter = [], 0
+    timeout = max(batch_size, timeout)
     while len(batch) < batch_size and timeout_counter <= timeout:
-      timeout_counter += 1
+      timeout_counter += 1 if len(batch) > 0 else 0
       rand_row = df.sample(n = 1).iloc[0]
       group, pid, record = rand_row["patient_group"], rand_row["patient_id"], rand_row["patient_record"]
       header = self.get_patient_header(group, pid, record)

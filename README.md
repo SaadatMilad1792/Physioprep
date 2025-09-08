@@ -20,10 +20,6 @@ Physioprep is a toolkit designed to support researchers working with physiologic
 At the time of the initial release, this package is primarily focused on the [MIMIC-III Waveform Database Matched Subset](https://physionet.org/content/mimic3wdb-matched/1.0/), one of the largest openly accessible physiological datasets. The goal is to enable its use in autoregressive predictive generative modeling. Development of this project was greatly inspired by the excellent [WFDB](https://wfdb.readthedocs.io/en/latest/index.html) library (Waveform Database). We are grateful for their work, which made it possible to build specialized modules like Physioprep in an efficient and task-oriented way.
 
 ## Navigation Panel
-<div style="display: flex; justify-content: space-between; width: 100%;">
-  <a href="/" style="color: #4a90e2; text-decoration: none; padding: 4px 8px; pointer-events: none; opacity: 0.6;">&#x2B9C; Back (Disabled)</a>
-  <div style="display: inline-block; white-space: nowrap; flex: 1;"></div>
-  <a href="/" style="color: #4a90e2; text-decoration: none; padding: 4px 8px; pointer-events: none; opacity: 0.6;">&#x2BAC; Return to repository (Disabled) &#x2BAF;</a>
-  <div style="display: inline-block; white-space: nowrap; flex: 1;"></div>
-  <a href="/docs/markdowns/getting_started.md" style="text-decoration: none; padding: 4px 8px;">Next (Getting Started) &#x2B9E;</a>
-</div>
+<!-- - [Back (Disabled)](/) -->
+<!-- - [Return to repository (Disabled)](/) -->
+- [Next (Getting Started)](/docs/markdowns/getting_started.md)
