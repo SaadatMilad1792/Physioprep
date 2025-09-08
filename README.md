@@ -20,8 +20,16 @@ Physioprep is a toolkit designed to support researchers working with physiologic
 At the time of the initial release, this package is primarily focused on the [MIMIC-III Waveform Database Matched Subset](https://physionet.org/content/mimic3wdb-matched/1.0/), one of the largest openly accessible physiological datasets. The goal is to enable its use in autoregressive predictive generative modeling. Development of this project was greatly inspired by the excellent [WFDB](https://wfdb.readthedocs.io/en/latest/index.html) library (Waveform Database). We are grateful for their work, which made it possible to build specialized modules like Physioprep in an efficient and task-oriented way.
 
 ## Navigation Panel
-<div style="display: flex; justify-content: space-between; width: 100%;">
-  <a href="/" style="color: #4a90e2; text-decoration: none; padding: 4px 8px; pointer-events: none; opacity: 0.6;">&#x2B9C; Back (Disabled)</a>
-  <a href="/" style="color: #4a90e2; text-decoration: none; padding: 4px 8px; pointer-events: none; opacity: 0.6;">&#x2BAC; Return to repository (Disabled) &#x2BAF;</a>
-  <a href="/docs/markdowns/getting_started.md" style="text-decoration: none; padding: 4px 8px;">Next (Getting Started) &#x2B9E;</a>
-</div>
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="text-align: left; padding: 4px 8px; width: 33.33%;">
+      <a href="/" style="color: #4a90e2; text-decoration: none; pointer-events: none; opacity: 0.6;">&#x2B9C; Back (Disabled)</a>
+    </td>
+    <td style="text-align: center; padding: 4px 8px; width: 33.33%;">
+      <a href="/" style="color: #4a90e2; text-decoration: none; pointer-events: none; opacity: 0.6;">&#x2BAC; Return to repository (Disabled) &#x2BAF;</a>
+    </td>
+    <td style="text-align: right; padding: 4px 8px; width: 33.33%;">
+      <a href="/docs/markdowns/getting_started.md" style="text-decoration: none;">Next (Getting Started) &#x2B9E;</a>
+    </td>
+  </tr>
+</table>
