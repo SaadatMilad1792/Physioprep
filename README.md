@@ -1,6 +1,7 @@
 ![Python](https://img.shields.io/badge/python-3.10-2ca02c?style=flat&labelColor=2f2f4f)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f77b4?style=flat&labelColor=2f2f4f)](./LICENSE)
-[![PyPI](https://img.shields.io/pypi/v/physioprep?style=flat&labelColor=2f2f4f&color=green)](https://pypi.org/project/physioprep/)
+[![Publish to TestPyPI](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml/badge.svg?branch=master)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml)
+[![Publish to PyPI](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml)
 
 <!-- [![Coverage](https://img.shields.io/codecov/c/github/username/physioprep?style=flat&labelColor=2f2f4f)](https://codecov.io/gh/username/physioprep) -->
 <!-- ![Contributions](https://img.shields.io/badge/contributions-Welcome-brightgreen?style=flat&labelColor=2f2f4f) -->
