@@ -126,7 +126,7 @@ class M3WaveFormMasterClass():
       rand_row = df.sample(n = 1).iloc[0]
       group, pid, record = rand_row["patient_group"], rand_row["patient_id"], rand_row["patient_record"]
       header = self.get_patient_header(group, pid, record)
-      random_offset = np.random.randint(0, header.sig_len - signal_len)
+      random_offset = np.random.randint(0, max(0, header.sig_len - signal_len) + 1)
       sampfrom, sampto = random_offset, random_offset + signal_len
       rec = self.get_patient_record(group, pid, record, sampfrom = sampfrom, sampto = sampto, channels = channels)
       waveform, val_flag = rec.p_signal, self.validation.apply(rec.p_signal, signal_len)

@@ -103,7 +103,7 @@ def test_get_subject_split():
   a, b, c = ppm().get_subject_split(df, channels = ['ABP', 'II', 'PLETH'])
   assert len(a) == 4784 and len(b) == 598 and len(c) == 598
 
-def test_():
+def test_get_data_batch():
   channels = ['ABP', 'II', 'PLETH']
   df = ppm().args_preset["patients_list"]
   tr_df, va_df, te_df = ppm().get_subject_split(df, channels = channels)
