@@ -30,7 +30,7 @@ jobs:
         run: poetry build
 
       - name: Configure GitHub Packages
-        run: poetry config repositories.github "https://pypi.pkg.github.com/SaadatMilad1792"
+        run: poetry config repositories.github "https://pypi.pkg.github.com/SaadatMilad1792/physioprep"
 
       - name: Publish package
         env:
