@@ -6,4 +6,4 @@ htmlcov/
 .coverage
 dist/
 .env
-.github/workflows/publish-testpypi.yml
+.github/workflows/publish-github.yml

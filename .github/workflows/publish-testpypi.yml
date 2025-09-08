@@ -1,4 +1,4 @@
-name: Publish to GitHub Packages
+name: Publish to TestPyPI
 
 on:
   push:
@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install Poetry
+      - name: Install latest Poetry
         run: pip install "poetry>=1.5.0"
 
       - name: Install dependencies
@@ -29,8 +30,10 @@ jobs:
       - name: Build package
         run: poetry build
 
-      - name: Configure GitHub Packages
-        run: poetry config repositories.github "https://__token__:${{ secrets.GH_PACKAGES_TOKEN }}@pypi.pkg.github.com/SaadatMilad1792"
+      - name: Configure TestPyPI repository
+        run: poetry config repositories.testpypi https://test.pypi.org/legacy/
 
-      - name: Publish package
-        run: poetry publish -r github --no-interaction
+      - name: Publish to TestPyPI
+        env:
+          POETRY_PYPI_TOKEN_TESTPYPI: ${{ secrets.TESTPYPI_TOKEN }}
+        run: poetry publish -r testpypi --no-interaction
