@@ -24,8 +24,8 @@ print(physioprep.__version__)
 ## Navigation Panel
 <div style="display: flex; justify-content: space-between; width: 100%;">
   <a href="/README.md" style="text-decoration: none;">&#x2B9C; Back (Introduction)</a>
-  <div style="display: inline-block; flex: 1;"></div>
+  <div style="display: inline-block; white-space: nowrap; flex: 1;"></div>
   <a href="/" style="text-decoration: none; padding: 4px 8px;">&#x2BAC; Return to repository &#x2BAF;</a>
-  <div style="display: inline-block; flex: 1;"></div>
+  <div style="display: inline-block; white-space: nowrap; flex: 1;"></div>
   <a href="/docs/markdowns/mimic_iii_tk.md" style="text-decoration: none; padding: 4px 8px;">Next (Getting Started) &#x2B9E;</a>
 </div>
