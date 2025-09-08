@@ -5,3 +5,4 @@ test.ipynb
 htmlcov/
 .coverage
 dist/
+.env

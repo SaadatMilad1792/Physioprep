@@ -21,11 +21,6 @@ jobs:
       - name: Install latest Poetry
         run: pip install "poetry>=1.5.0"
 
-      - name: Clear Poetry cached credentials
-        run: |
-          poetry config --unset pypi-token.pypi || true
-          poetry config --unset pypi-token.testpypi || true
-
       - name: Install dependencies
         run: poetry install
 
@@ -40,9 +35,5 @@ jobs:
 
       - name: Publish to TestPyPI
         env:
-          TESTPYPI_USERNAME: ${{ secrets.TESTPYPI_USERNAME }}
-          TESTPYPI_PASSWORD: ${{ secrets.TESTPYPI_PASSWORD }}
-        run: |
-          poetry publish -r testpypi \
-            --username $TESTPYPI_USERNAME \
-            --password $TESTPYPI_PASSWORD
+          POETRY_PYPI_TOKEN_TESTPYPI: ${{ secrets.TESTPYPI_TOKEN }}
+        run: poetry publish -r testpypi --no-interaction
