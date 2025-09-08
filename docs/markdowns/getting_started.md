@@ -22,16 +22,10 @@ print(physioprep.__version__)
 ```
 
 ## Navigation Panel
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="text-align: left; padding: 4px 8px; width: 33.33%;">
-      <a href="/README.md" style="text-decoration: none;">&#x2B9C; Back (Introduction)</a>
-    </td>
-    <td style="text-align: center; padding: 4px 8px; width: 33.33%;">
-      <a href="/" style="text-decoration: none;">&#x2BAC; Return to repository &#x2BAF;</a>
-    </td>
-    <td style="text-align: right; padding: 4px 8px; width: 33.33%;">
-      <a href="/docs/markdowns/mimic_iii_tk.md" style="text-decoration: none;">Next (Getting Started) &#x2B9E;</a>
-    </td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between; width: 100%;">
+  <a href="/README.md" style="text-decoration: none;">&#x2B9C; Back (Introduction)</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/" style="text-decoration: none; padding: 4px 8px;">&#x2BAC; Return to repository &#x2BAF;</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/docs/markdowns/mimic_iii_tk.md" style="text-decoration: none; padding: 4px 8px;">Next (Getting Started) &#x2B9E;</a>
+</div>
