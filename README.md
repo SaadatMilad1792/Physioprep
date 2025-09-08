@@ -1,7 +1,8 @@
 ![Python](https://img.shields.io/badge/python-3.10-2ca02c?style=flat&labelColor=2f2f4f)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f77b4?style=flat&labelColor=2f2f4f)](./LICENSE)
-[![Publish to TestPyPI](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml/badge.svg?branch=master)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml)
-[![Publish to PyPI](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/username/repo?style=flat&labelColor=2f2f4f&color=ff7f0e)](https://codecov.io/gh/username/repo)
+[![TestPyPI](https://img.shields.io/github/actions/workflow/status/username/repo/publish-testpypi.yml?label=TestPyPI&style=flat&labelColor=2f2f4f&color=d62728)](https://github.com/username/repo/actions/workflows/publish-testpypi.yml)
+[![PyPI](https://img.shields.io/github/actions/workflow/status/username/repo/publish-pypi.yml?label=PyPI&style=flat&labelColor=2f2f4f&color=9467bd)](https://github.com/username/repo/actions/workflows/publish-pypi.yml)
 
 <!-- [![Coverage](https://img.shields.io/codecov/c/github/username/physioprep?style=flat&labelColor=2f2f4f)](https://codecov.io/gh/username/physioprep) -->
 <!-- ![Contributions](https://img.shields.io/badge/contributions-Welcome-brightgreen?style=flat&labelColor=2f2f4f) -->
