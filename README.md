@@ -1,9 +1,13 @@
 ![Python](https://img.shields.io/badge/python-3.10-2ca02c?style=flat&labelColor=2f2f4f)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f77b4?style=flat&labelColor=2f2f4f)](./LICENSE)
-[![Coverage](https://github.com/SaadatMilad1792/physioprep/actions/workflows/tests.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/tests.yml)
-[![PyPI Status](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml)
-[![TestPyPI Status](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml)
+[![PyPI](https://img.shields.io/pypi/v/physioprep?style=flat&labelColor=2f2f4f&color=9467bd&logo=pypi)](https://pypi.org/project/physioprep/)
+[![TestPyPI](https://img.shields.io/badge/dynamic/json?url=https://test.pypi.org/pypi/physioprep/json&query=info.version&label=TestPyPI&style=flat&labelColor=2f2f4f&color=9467bd&logo=pypi)](https://test.pypi.org/project/physioprep/)
+[![Codecov](https://codecov.io/gh/SaadatMilad1792/physioprep/branch/main/graph/badge.svg)](https://codecov.io/gh/SaadatMilad1792/physioprep)
 
+
+<!-- [![Coverage](https://github.com/SaadatMilad1792/physioprep/actions/workflows/tests.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/tests.yml) -->
+<!-- [![PyPI Status](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-pypi.yml)
+[![TestPyPI Status](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml/badge.svg)](https://github.com/SaadatMilad1792/physioprep/actions/workflows/publish-testpypi.yml) -->
 <!-- [![Coverage](https://img.shields.io/codecov/c/github/username/physioprep?style=flat&labelColor=2f2f4f)](https://codecov.io/gh/username/physioprep) -->
 <!-- ![Contributions](https://img.shields.io/badge/contributions-Welcome-brightgreen?style=flat&labelColor=2f2f4f) -->
 <!-- ![Last Commit](https://img.shields.io/github/last-commit/username/physioprep?style=flat&labelColor=2f2f4f) -->
