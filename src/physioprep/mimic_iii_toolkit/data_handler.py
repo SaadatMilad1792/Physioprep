@@ -81,7 +81,7 @@ class M3WaveFormMasterClass():
 
   ## -- get patient record as a dataset -- ##
   def get_patient_record(self, group: str, pid: str, record: str, sampfrom: int = 0, 
-                         sampto: int | None  = None, channels: list[int] | None = None) -> wfdb.Record:
+                         sampto: int | None = None, channels: list[int] | None = None) -> wfdb.Record:
 
     df = self.args_preset["patients_list"].copy()
     available_channels = df[(df["patient_id"] == pid) & (df["patient_record"] == record)].iloc[0]
@@ -122,15 +122,20 @@ class M3WaveFormMasterClass():
     batch, timeout_counter = [], 0
     timeout = max(batch_size, timeout)
     while len(batch) < batch_size and timeout_counter <= timeout:
-      timeout_counter += 1 if len(batch) > 0 else 0
+      timeout_counter += 1
+      # timeout_counter += 1 if len(batch) > 0 else 0
       rand_row = df.sample(n = 1).iloc[0]
       group, pid, record = rand_row["patient_group"], rand_row["patient_id"], rand_row["patient_record"]
-      header = self.get_patient_header(group, pid, record)
-      random_offset = np.random.randint(0, max(0, header.sig_len - signal_len) + 1)
-      sampfrom, sampto = random_offset, random_offset + signal_len
-      rec = self.get_patient_record(group, pid, record, sampfrom = sampfrom, sampto = sampto, channels = channels)
-      waveform, val_flag = rec.p_signal, self.validation.apply(rec.p_signal, signal_len)
-      batch.append(waveform.transpose(1, 0)) if val_flag else None
-      # print(rec.p_signal.shape, header.fs, rec.sig_name)
 
-    return np.stack(batch)
+      try:
+        header = self.get_patient_header(group, pid, record)
+        random_offset = np.random.randint(0, max(0, header.sig_len - signal_len) + 1)
+        sampfrom, sampto = random_offset, random_offset + signal_len
+        rec = self.get_patient_record(group, pid, record, sampfrom = sampfrom, sampto = sampto, channels = channels)
+        waveform, val_flag = rec.p_signal, self.validation.apply(rec.p_signal, signal_len)
+        batch.append(waveform.transpose(1, 0)) if val_flag else None
+        # print(rec.p_signal.shape, header.fs, rec.sig_name)
+      except:
+        continue
+    
+    return np.stack(batch) if len(batch) > 0 else False

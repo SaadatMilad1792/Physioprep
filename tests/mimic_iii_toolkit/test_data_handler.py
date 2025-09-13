@@ -107,6 +107,12 @@ def test_get_data_batch():
   channels = ['ABP', 'II', 'PLETH']
   df = ppm().args_preset["patients_list"]
   tr_df, va_df, te_df = ppm().get_subject_split(df, channels = channels)
-  batch = ppm().get_data_batch(tr_df, batch_size = 12, signal_len = 750, channels = channels)
+  batch = ppm().get_data_batch(tr_df, batch_size = 4, signal_len = 750, channels = channels)
   assert batch.shape[1:] == (3, 750)
-  assert batch.shape[0] <= 12
+  assert batch.shape[0] <= 4
+
+  channels = ['ABP', 'II', 'PLETH']
+  df = ppm().args_preset["patients_list"]
+  tr_df, va_df, te_df = ppm().get_subject_split(df, channels = channels)
+  batch = ppm().get_data_batch(tr_df, batch_size = 4, signal_len = -1, channels = channels)
+  assert not batch

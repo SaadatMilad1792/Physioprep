@@ -39,7 +39,7 @@ get_available_signals(self) -> list[str]
 ### Methods &#x279C; get_patient_with_signal
 ```python
 get_patient_with_signal(self, patients: list[str] | None = None, 
-                              signal_filter: list[str] | None = None) -> pd.DataFrame
+                        signal_filter: list[str] | None = None) -> pd.DataFrame
 ```
 **Description:** gets all the entries in the patients dataframe which have certain signals.
 
@@ -53,7 +53,7 @@ get_patient_with_signal(self, patients: list[str] | None = None,
 ### Methods &#x279C; get_patient_record
 ```python
 get_patient_record(self, group: str, pid: str, record: str, sampfrom: int = 0, 
-                         sampto: int | None  = None, channels: list[int] | None = None) -> wfdb.Record
+                   sampto: int | None = None, channels: list[int] | None = None) -> wfdb.Record
 ```
 **Description:** given a patients information, fetches the corresponding record data files.
 
@@ -81,7 +81,7 @@ get_patient_header(self, group: str, pid: str, record: str) -> wfdb.Record
 
 **Returns:** returns the corresponding `wfdb.Record` for a given patient (just the header).
 
-<!-- get_patient_header -->
+<!-- get_subject_split -->
 ### Methods &#x279C; get_patient_header
 ```python
 get_subject_split(self, df: pd.DataFrame, frac1: float = 0.8, frac2: float = 0.1, frac3: float = 0.1, 
